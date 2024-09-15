@@ -2,6 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     font-size: 1.5vw;
+    background-color: antiquewhite;
 }
 
 h1 {
@@ -25,23 +26,20 @@ body > header {
 
 #main-header {
     display: flex;
-    height: 15vh;
+    height: 100px;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
 }
 
 #body-footer {
-    display: flex;
-    height: 18vh;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    box-shadow: 0 -4px 6px -3px rgba(0, 0, 0, 0.1);
-    
+    background-color: blanchedalmond;;
+    padding: 20px 0;
+    color: #333;
+    border-top: 1px solid #ddd;
 }
+
 #nav-ul {
     display: flex;
     gap: 15px;
@@ -91,25 +89,77 @@ h2 {
     font-family: Arial, sans-serif;
 }
 
+a {
+    color: #5C4033;
+}
 body > footer {
     background-color: blanchedalmond;
     display: flex;    
 }
 
-#footer-ul {
+/* Footer START */
+#body-footer {
+    background-color: blanchedalmond;
+    padding: 10px 10px;
+    color: #333;
+    border-top: 1px solid #ddd;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-top h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Playpen Sans', sans-serif;
+    color: #333;
+}
+
+#footer-ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
 }
 
-#footer-ul > div > li {
-    margin-left: 100px;
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#footer-ul > div > li > a {
+.footer-links li {
+    margin: 0;
+}
+
+.footer-links a {
     text-decoration: none;
     color: black;
     font-family: Arial, sans-serif;
+    font-size: 1em;
+    transition: color 0.3s;
 }
+
+.footer-links a:hover {
+    color: #0056b3;
+}
+
+#copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+}
+/* Footer END */
+
 
 img {
     width: 30%;
@@ -117,9 +167,10 @@ img {
 }
 
 #copyright {
-    display: flex;
-    margin-left: 38vw;
-    margin-top: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
 }
 
 .toc-container {
@@ -151,7 +202,7 @@ img {
 
 .toc-list li a {
     text-decoration: none;
-    color: #4a90e2;
+    color: #5C4033;
     font-size: 18px;
     font-weight: bold;
     display: block;
@@ -161,15 +212,90 @@ img {
 }
 
 .toc-list li a:hover {
-    background-color: #4a90e2;
+    background-color: wheat;
     color: #fff;
 }
 
-h3 {
-    text-decoration: underline;
-} 
+/* General styling for form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Reduced from 600px to 400px */
+    margin: 0 auto;
+    padding: 15px; /* Reduced padding from 20px to 15px */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+/* Form input labels */
+form label {
+    font-size: 1em; /* Reduced font size from 1.1em to 1em */
+    margin-bottom: 5px;
+    font-family: 'Playpen Sans', sans-serif;
+}
 
-#main-between {
-    
+/* Input fields and textarea styling */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px; /* Reduced padding from 10px to 8px */
+    margin-bottom: 12px; /* Slightly reduced margin */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em; /* Reduced font size */
+    font-family: 'Playpen Sans', sans-serif;
+}
+
+/* Textarea specific styling */
+form textarea {
+    height: 80px; /* Reduced height */
+    resize: vertical;
+}
+
+/* Submit button styling */
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em; /* Reduced font size from 1.2em to 1.1em */
+    font-family: 'Playpen Sans', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style the form container and spacing between fields */
+form label, form input, form select, form textarea {
+    margin-bottom: 10px;
+}
+
+/* Align the form header nicely */
+form h2 {
+    text-align: center;
+    margin-bottom: 15px; /* Reduced bottom margin */
+    font-family: 'Playpen Sans', sans-serif;
+}
+
+.radio-group {
+    margin-bottom: 20px;
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
 }
