@@ -162,8 +162,12 @@ body > footer {
 
 
 img {
-    width: 30%;
+    width: 90%;
     border-radius: 100%;
+}
+
+#nut-img {
+    width: 60%;
 }
 
 #copyright {
